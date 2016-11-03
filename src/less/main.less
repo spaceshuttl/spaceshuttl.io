@@ -1,0 +1,138 @@
+@import "normalize";
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@colour-primary: rgba(252, 126, 97, 0.8);
+@colour-black: #000000;
+@colour-white: #FFFFF3;
+
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #3b3b3b;
+}
+
+h1,
+h2,
+h3,
+p {
+    color: @colour-white;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 4rem;
+    text-decoration: none;
+    margin: 0 0 1.3rem;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 3.25rem;
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#landing {
+    height: 100vh;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#container {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#social {
+    z-index: 1;
+    padding-top: 5rem;
+}
+
+.row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    margin-top: 1.3rem;
+}
+
+a.button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 2.5px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    color: @colour-white;
+    background-color: @colour-primary;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid @colour-primary;
+    box-shadow: 0 1px 21px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    transition: all 0.13s ease-in-out;
+
+    &:hover {
+        background-color: lighten(@colour-primary, 3%);
+        transform: translateY(-1px);
+        transform: scale(1.03, 1.03);
+        box-shadow: 0 1.5px 2px rgba(0,0,0,.16), 0 1.5px 3px rgba(0,0,0,.23);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+@media (max-width:1024px) {
+    .ribbon {
+        -webkit-transform: scale(.75);
+        -moz-transform: scale(.75);
+        -o-transform: scale(.75);
+        -ms-transform: scale(.75);
+        transform: scale(.75);
+        -webkit-transform-origin: 100% 0;
+        -moz-transform-origin: 100% 0;
+        -o-transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
+        transform-origin: 100% 0;
+    }
+}
+@media (max-width:640px) {
+    .ribbon {
+        -webkit-transform: scale(.5);
+        -moz-transform: scale(.5);
+        -o-transform: scale(.5);
+        -ms-transform: scale(.5);
+        transform: scale(.5);
+        -webkit-transform-origin: 100% 0;
+        -moz-transform-origin: 100% 0;
+        -o-transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
+        transform-origin: 100% 0;
+    }
+}
